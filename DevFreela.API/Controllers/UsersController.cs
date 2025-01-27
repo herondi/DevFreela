@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreela.API.Controllers
 {
@@ -10,9 +9,25 @@ namespace DevFreela.API.Controllers
     {
         // POST api/users
         [HttpPost]
-      public IActionResult Post()
+        public IActionResult Post()
         {
             return Ok();
+        }
+
+        // PUT api/users/{id}/profile-picture
+        [HttpPut("{id}/profile-picture")]
+        public IActionResult PostProfilePicture(int id, IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest("No file uploaded.");
+            }
+
+            var description = $"File: {file.FileName}, Size: {file.Length}";
+
+            // Process the image here
+
+            return Ok(description);
         }
     }
 }
