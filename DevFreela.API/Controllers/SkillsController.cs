@@ -19,10 +19,14 @@ namespace DevFreela.API.Controllers
         //POST api/skills
 
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post(CreateSkillInputModel model)
         {
             return Ok();
 
         }
+    }
+
+    public class CreateSkillInputModel
+    {
     }
 }

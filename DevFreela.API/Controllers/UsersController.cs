@@ -9,7 +9,7 @@ namespace DevFreela.API.Controllers
     {
         // POST api/users
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post(CreatedUserInputModel model)
         {
             return Ok();
         }
