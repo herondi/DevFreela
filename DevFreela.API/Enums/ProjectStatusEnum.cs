@@ -8,6 +8,7 @@
         Cancelled = 3,
         Completed = 4,
         PaymentPendig = 5,
-
+        InProgress = 6,
+        PaymentPending = 7,
     }
 }

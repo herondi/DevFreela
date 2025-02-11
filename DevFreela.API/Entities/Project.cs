@@ -33,7 +33,7 @@ namespace DevFreela.API.Entities
 
         public void Cancel()
         {
-            if (Status == ProjectStatusEnum.InProgress || Status == ProjectStatusEnum.Suspended)
+            if (Status == ProjectStatusEnum.Inprogress || Status == ProjectStatusEnum.Suspended)
             {
                 Status = ProjectStatusEnum.Cancelled;
             }
